@@ -2,8 +2,6 @@
 
 A high-performance, modern, and aesthetically pleasing S3 file management system built with **Next.js 16**, **React 19**, and **Tailwind CSS 4**. This application provides a seamless interface for uploading, managing, and viewing files stored in AWS S3 or any S3-compatible storage (like MinIO, DigitalOcean Spaces, etc.).
 
-![Banner Placeholder](https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=2070&auto=format&fit=crop)
-
 ## ✨ Features
 
 - **🚀 Instant Uploads**: Blazing fast file uploads directly to S3 with real-time progress.
