@@ -47,7 +47,7 @@ export function ImageGallery() {
   }
 
   useEffect(() => {
-    loadFiles();
+    loadFiles(true);
   }, []);
 
   return (
