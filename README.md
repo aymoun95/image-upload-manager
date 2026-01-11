@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📂 S3 Cloud Manager
 
-## Getting Started
+A high-performance, modern, and aesthetically pleasing S3 file management system built with **Next.js 16**, **React 19**, and **Tailwind CSS 4**. This application provides a seamless interface for uploading, managing, and viewing files stored in AWS S3 or any S3-compatible storage (like MinIO, DigitalOcean Spaces, etc.).
 
-First, run the development server:
+![Banner Placeholder](https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=2070&auto=format&fit=crop)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **🚀 Instant Uploads**: Blazing fast file uploads directly to S3 with real-time progress.
+- **🖼️ Image Gallery**: A beautiful grid layout to browse your uploaded images with ease.
+- **🖱️ Drag & Drop**: Intuitive file selection using `react-dropzone`.
+- **🗑️ Smart Deletion**: Cleanly remove files from both your UI and S3 bucket.
+- **🌗 Dark Mode**: Full support for dark and light themes with smooth transitions.
+- **🛡️ Secure**: Built-in validation using **Zod** and secure S3 client configuration.
+- **⚡ Next.js 16 Ready**: Utilizing the latest features of Next.js and React 19 for optimal performance.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: [Next.js 16+](https://nextjs.org/) (App Router)
+- **UI Architecture**: [React 19](https://react.dev/), [Shadcn UI](https://ui.shadcn.com/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Storage**: AWS S3 SDK (@aws-sdk/client-s3)
+- **Data Validation**: [Zod](https://zod.dev/)
 
-## Learn More
+## 🚀 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js 18+
+- pnpm
+- An S3-compatible storage bucket
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1. **Clone the repository:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/aymoun95/image-upload-manager
+   cd image-upload-manager
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Install dependencies:**
+
+   ```bash
+   pnpm install
+   ```
+
+3. **Configure Environment Variables:**
+   Create a `.env` file in the root directory (use `.env.example` as a template):
+
+   ```env
+   S3_ENDPOINT=your_endpoint
+   S3_ACCESS_KEY_ID=your_access_key
+   S3_SECRET_ACCESS_KEY=your_secret_key
+   S3_REGION=your_region
+   S3_BUCKET_NAME=your_bucket_name
+   ```
+
+4. **Run the development server:**
+
+   ```bash
+   pnpm dev
+   ```
+
+5. **Open [http://localhost:3000](http://localhost:3000)** to see the app in action!
+
+## 📂 Project Structure
+
+- `/app`: Next.js App Router folders and routes.
+- `/components`: Reusable UI components (shadcn/ui base).
+- `/lib`: Core utility functions including the S3 client setup.
